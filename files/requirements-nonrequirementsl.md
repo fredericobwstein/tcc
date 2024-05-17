@@ -1,3 +1,4 @@
-  <h1> Casos de uso </h1>
+
+<h1> Casos de uso </h1>
   
-  [Redirecionamento](/files/casos-de-uso.png)
+[Redirecionamento](/files/casos-de-uso.png)
