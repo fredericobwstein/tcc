@@ -16,7 +16,7 @@
 
 **Qualidade do produto**
 
-- Testes unitários serão implementados tanto no front-end quanto no back-end para melhor cobertura de qualidade do projeto, utilizando o SonarQube para melhoria da qualidade nos cenários dos testes unitários.
+- Testes unitários serão implementados no back-end para melhor cobertura de qualidade do projeto, utilizando o SonarQube para melhoria da qualidade nos cenários dos testes unitários.
 
 ## Restrições
 
