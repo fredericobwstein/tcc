@@ -1,6 +1,6 @@
 # Catálogo Animê
 
-## Identificação, proposta e solução.
+## Identificação, proposta e solução
 - Catálogo Animê tem o objetivo de resolver os problemas de quem está a procura de assistir ou conhecer alguma obra animada, em um sistema simples e direto.
 
 - A ideia facilita a procura de uma obra, proporcionando um catálogo de obras com sua sinopse, podendo também adicionar a uma lista de desejos.
@@ -12,7 +12,7 @@
 
 **Desenvolvimento**
 
-- O projeto será um sistema web, desenvolvido com C# e React. C# para desenvolvimento da API que retornará informações necessárias para realizar as funcionalidades das telas feitas com o React, e também para consumir uma API de listagem de obras animadas, para filtragrem e visualização das obras em desejo. 
+- O projeto será um sistema web, desenvolvido com C# e React. C# para desenvolvimento da API que retornará informações necessárias para realizar as funcionalidades das telas feitas com o React, e também para consumir uma API de listagem de obras animadas, para filtragrem e visualização das obras em desejo.
 
 **Qualidade do produto**
 
@@ -31,7 +31,7 @@
 - [Acesse este caminho para ser redirecionado aos requisitos e os casos de uso.](files/requirements-nonrequirementsl.md)
 
 ## Modelagem por funcionalidade
-- Com o próprio GitHub, na opção de Projetos, as tarefas estão sendo dividas em processos no estilo Kanban. 
+- Com o próprio GitHub, na opção de Projetos, as tarefas estão sendo dividas em processos no estilo Kanban.
 ## stack
 
 - BE: C# e .Net Core
