@@ -1,7 +1,7 @@
-# Catálogo Animê
+# Animecatalog
 
 ## Identificação, proposta e solução
-- Catálogo Animê tem o objetivo de resolver os problemas de quem está a procura de assistir ou conhecer alguma obra animada, em um sistema simples e direto.
+- Animecatalog tem o objetivo de resolver os problemas de quem está a procura de assistir ou conhecer alguma obra animada, em um sistema simples e direto.
 
 - A ideia facilita a procura de uma obra, proporcionando um catálogo de obras com sua sinopse, podendo também adicionar a uma lista de desejos.
 
