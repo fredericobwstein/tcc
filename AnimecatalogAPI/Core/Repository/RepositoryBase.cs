@@ -7,7 +7,7 @@ using static Dapper.SqlMapper;
 
 namespace AnimecatalogAPI.Core.Repository
 {
-    public class RepositoryBase
+    public class RepositoryBase : IRepositoryBase
     {
         private readonly string _connString;
 
