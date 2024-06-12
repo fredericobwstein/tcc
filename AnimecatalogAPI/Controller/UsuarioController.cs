@@ -24,9 +24,9 @@ namespace AnimecatalogAPI.Controller
         }
 
         [HttpPost("Login")]
-        public ActionResult Login(string email, string senha) 
+        public ActionResult Login(LoginRequest request) 
         {
-            var usuario = _usuarioService.Autenticar(email, senha);
+            var usuario = _usuarioService.Autenticar(request);
 
             if (usuario is null)
                 throw new Exception("Usuário ou senha inválidos");

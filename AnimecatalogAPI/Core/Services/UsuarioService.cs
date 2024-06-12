@@ -28,13 +28,13 @@ namespace AnimecatalogAPI.Core.Services
             _usuarioRepository.Insert(usuario);
         }
 
-        public PostLoginResponse Autenticar(string email, string senha)
+        public PostLoginResponse Autenticar(LoginRequest request)
         {
-            var usuario = _usuarioRepository.GetAll<Usuario>(new { Email = email }).FirstOrDefault();
+            var usuario = _usuarioRepository.GetAll<Usuario>(new { Email = request.Email }).FirstOrDefault();
 
             if (usuario != null)
             {
-                var senhaValida = BC.Verify(senha, usuario?.Senha);
+                var senhaValida = BC.Verify(request.Senha, usuario?.Senha);
 
                 if (senhaValida)
                 {
