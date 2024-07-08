@@ -16,16 +16,23 @@ namespace AnimecatalogAPI.Core.Services
 
         public void AddUsuario(PostUsuarioRequest request)
         {
-            var usuario = new Entities.Usuario
+            try
             {
-                Id = Guid.NewGuid(),
-                Nome = request.Nome,
-                Email = request.Email,
-                Senha = BC.HashPassword(request.Senha),
-                DataCadastro = DateTime.Now,
-            };
+                var usuario = new Entities.Usuario
+                {
+                    Id = Guid.NewGuid(),
+                    Nome = request.Nome,
+                    Email = request.Email,
+                    Senha = BC.HashPassword(request.Senha),
+                    DataCadastro = DateTime.Now,
+                };
 
-            _usuarioRepository.Insert(usuario);
+                _usuarioRepository.Insert(usuario);
+            }
+            catch (Exception ex) 
+            {
+                throw new Exception("Email já cadastrado.");
+            }
         }
 
         public PostLoginResponse Autenticar(LoginRequest request)

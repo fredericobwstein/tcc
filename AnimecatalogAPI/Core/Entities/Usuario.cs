@@ -17,7 +17,6 @@ namespace AnimecatalogAPI.Core.Entities
         public string Senha { get; set; }
         [Column("datacadastro")]
         public DateTime DataCadastro { get; set; }
-        public List<ListaDesejos> ListasDesejos { get; set; }
     }
 
 }

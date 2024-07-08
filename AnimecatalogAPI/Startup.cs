@@ -1,4 +1,5 @@
 ﻿using AnimecatalogAPI.Core.Repository;
+using AnimecatalogAPI.Core.Repository.Usuario;
 using AnimecatalogAPI.Core.Services;
 using AnimecatalogAPI.Utils;
 
@@ -79,8 +80,11 @@ public class Startup
         services.AddScoped<IRepositoryBase, RepositoryBase>();
 
         services.AddScoped<UsuarioRepository>();
+        services.AddScoped<UsuarioListaDesejoRepository>();
+        
 
         services.AddScoped<UsuarioService>();
+        services.AddScoped<UsuarioListaDesejoService>();
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
