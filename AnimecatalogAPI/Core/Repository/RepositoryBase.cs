@@ -13,7 +13,7 @@ namespace AnimecatalogAPI.Core.Repository
 
         public RepositoryBase(IConfiguration configuration)
         {
-            _connString = configuration.GetConnectionString("DbContext");
+            _connString = configuration.GetConnectionString("POSTGRESQLCONNSTR_DbContext");
         }
 
         public IEnumerable<T> Query<T>(string sql, object obj = null) where T : class
