@@ -1,4 +1,5 @@
 ﻿using AnimecatalogAPI.Core.Entities;
+using AnimecatalogAPI.Core.Exception;
 using AnimecatalogAPI.Core.Messaging;
 using AnimecatalogAPI.Core.Repository;
 using BC = BCrypt.Net.BCrypt;
@@ -29,9 +30,9 @@ namespace AnimecatalogAPI.Core.Services
 
                 _usuarioRepository.Insert(usuario);
             }
-            catch (Exception ex) 
+            catch (System.Exception ex) 
             {
-                throw new Exception("Email já cadastrado.");
+                throw new AnimecatalogException("Email já cadastrado.");
             }
         }
 
@@ -54,7 +55,8 @@ namespace AnimecatalogAPI.Core.Services
 
                 }
             }
-            throw new Exception("Email ou senha inválidos.");
+
+            return null;
         }
     }
 }

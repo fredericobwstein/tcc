@@ -1,6 +1,8 @@
 ﻿using AnimecatalogAPI.Core.Entities;
+using AnimecatalogAPI.Core.Exception;
 using AnimecatalogAPI.Core.Messaging;
 using AnimecatalogAPI.Core.Services;
+
 using Microsoft.AspNetCore.Mvc;
 
 namespace AnimecatalogAPI.Controller
@@ -19,19 +21,42 @@ namespace AnimecatalogAPI.Controller
         [HttpPost("Cadastro")]
         public ActionResult AddUsuario(PostUsuarioRequest request)
         {
-            _usuarioService.AddUsuario(request);
-            return Ok();
+            try
+            {
+                _usuarioService.AddUsuario(request);
+                return Ok();
+            }
+            catch (AnimecatalogException e)
+            {
+                return BadRequest(e.Message);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("Erro genérico.");
+            }
         }
 
         [HttpPost("Login")]
-        public ActionResult Login(LoginRequest request) 
+        public ActionResult Login(LoginRequest request)
         {
-            var usuario = _usuarioService.Autenticar(request);
+            try
+            {
+                var usuario = _usuarioService.Autenticar(request);
 
-            if (usuario is null)
-                throw new Exception("Usuário ou senha inválidos");
+                if (usuario is null)
+                    throw new AnimecatalogException("Usuário ou senha inválidos.");
 
-            return Ok(usuario);
+                return Ok(usuario);
+
+            }
+            catch (AnimecatalogException e)
+            {
+                return BadRequest(e.Message);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("Erro genérico.");
+            }
         }
     }
 }

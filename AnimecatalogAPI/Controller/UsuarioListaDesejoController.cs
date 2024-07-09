@@ -3,6 +3,7 @@ using AnimecatalogAPI.Core.Entities;
 using System.Threading.Tasks;
 using System.Linq;
 using AnimecatalogAPI.Core.Services;
+using AnimecatalogAPI.Core.Exception;
 
 namespace AnimecatalogAPI.Controllers
 {
@@ -20,22 +21,55 @@ namespace AnimecatalogAPI.Controllers
         [HttpPost]
         public ActionResult AddToWishlist([FromBody] PostUsuarioListaDesejoRequest usuarioListaDesejo)
         {
-            _usuarioListaDesejoService.AddListaDesejo(usuarioListaDesejo);
-            return Ok();
+            try
+            {
+                _usuarioListaDesejoService.AddListaDesejo(usuarioListaDesejo);
+                return Ok();
+            }
+            catch (AnimecatalogException e)
+            {
+                return BadRequest(e.Message);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("Erro genérico.");
+            }
         }
 
         [HttpGet("{userId}")]
         public ActionResult GetWishlistItems(Guid userId)
         {
-            var items = _usuarioListaDesejoService.ObterListaItemDesejo(userId);
-            return Ok(items);
+            try
+            {
+                var items = _usuarioListaDesejoService.ObterListaItemDesejo(userId);
+                return Ok(items);
+            }
+            catch (AnimecatalogException e)
+            {
+                return BadRequest(e.Message);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("Erro genérico.");
+            }
         }
 
         [HttpDelete]
         public ActionResult RemoveWishListItem([FromBody] DeleteUsuarioListaDesejoRequest request)
         {
-            _usuarioListaDesejoService.RemoveItemListaDesejo(request);
+            try
+            {
+                _usuarioListaDesejoService.RemoveItemListaDesejo(request);
                 return Ok();
+            }
+            catch (AnimecatalogException e)
+            {
+                return BadRequest(e.Message);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest("Erro genérico.");
+            }
         }
     }
 }
