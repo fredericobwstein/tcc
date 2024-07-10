@@ -1,7 +1,8 @@
 # Animecatalog
 
-Link domínio backend: https://animecatalogapi20240708203642.azurewebsites.net/swagger/index.html 
-Link domínio frontend: https://tcc-frontend-sooty.vercel.app
+- Link domínio backend: https://animecatalogapi20240708203642.azurewebsites.net/swagger/index.html
+  
+- Link domínio frontend: https://tcc-frontend-sooty.vercel.app
 
 ## Identificação, proposta e solução
 - Animecatalog tem o objetivo de resolver os problemas de quem está a procura de assistir ou conhecer alguma obra animada, em um sistema simples e direto.
@@ -53,4 +54,4 @@ Link domínio frontend: https://tcc-frontend-sooty.vercel.app
 - Execute a aplicação do backend.
 - Clonar o repositório do front-end(https://github.com/fredericobwstein/tcc-frontend) e execute o seguinte comando: `npm i`
 - Crie um arquivo chamando `.env` e adicione a seguinte informação: `REACT_APP_XD=https://localhost:7281`. Lembre-se de colocar a URL do localhost do seu backend local.
-- Execute o seguinte comando: `npm run dev`
+- Execute o seguinte comando: `npm start`
