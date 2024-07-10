@@ -24,16 +24,16 @@ namespace AnimecatalogAPI.Core.Services
         }
 
         public void AddUsuario(PostUsuarioRequest request)
-        {
+        {s
 
             if(string.IsNullOrEmpty(request.Email))
-                throw new AnimecatalogException("Email é obrigatório.");
+                throw new AnimecatalogException("Email obrigatorio.");
 
             if (string.IsNullOrEmpty(request.Nome))
-                throw new AnimecatalogException("Nome é obrigatório.");
+                throw new AnimecatalogException("Nome obrigatorio.");
 
             if (string.IsNullOrEmpty(request.Senha))
-                throw new AnimecatalogException("Senha é obrigatório.");
+                throw new AnimecatalogException("Senha obrigatorio.");
 
             try
             {

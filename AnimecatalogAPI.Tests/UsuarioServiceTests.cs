@@ -32,7 +32,7 @@ namespace AnimecatalogAPI.Tests
 
             // Act & Assert
             var ex = Assert.Throws<AnimecatalogException>(() => _usuarioService.AddUsuario(request));
-            Assert.Equal("Nome é obrigatório.", ex.Message);
+            Assert.Equal("Nome obrigatorio.", ex.Message);
         }
 
         [Fact]
@@ -48,7 +48,7 @@ namespace AnimecatalogAPI.Tests
 
             // Act & Assert
             var ex = Assert.Throws<AnimecatalogException>(() => _usuarioService.AddUsuario(request));
-            Assert.Equal("Email é obrigatório.", ex.Message);
+            Assert.Equal("Email obrigatorio.", ex.Message);
         }
 
         [Fact]
@@ -64,7 +64,7 @@ namespace AnimecatalogAPI.Tests
 
             // Act & Assert
             var ex = Assert.Throws<AnimecatalogException>(() => _usuarioService.AddUsuario(request));
-            Assert.Equal("Senha é obrigatório.", ex.Message);
+            Assert.Equal("Senha obrigatorio.", ex.Message);
         }
     }
 }
