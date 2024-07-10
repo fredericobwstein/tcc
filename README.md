@@ -16,7 +16,7 @@
 
 **Qualidade do produto**
 
-- Testes unitários serão implementados no backend para melhor cobertura de qualidade do projeto, utilizando o SonarQube para melhoria da qualidade nos cenários dos testes unitários.
+- Testes unitários serão implementados no backend para melhor cobertura de qualidade do projeto, utilizando o CodeCov para melhoria da qualidade nos cenários dos testes unitários.
 
 ## Restrições
 
@@ -35,7 +35,7 @@
 ## stack
 
 - BE: C# e .Net Core
-- FE:  React e Redux
-- Databse: PostgreSQL
-- Qualidade nos cenários de testes: SonarQube
-- Observalidade: Datadog
+- FE:  React
+- Database: PostgreSQL
+- Qualidade nos cenários de testes: CodeCov
+- Observalidade: Azure Application Insights
