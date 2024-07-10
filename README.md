@@ -1,5 +1,8 @@
 # Animecatalog
 
+Link domínio backend: https://animecatalogapi20240708203642.azurewebsites.net/swagger/index.html 
+Link domínio frontend: https://tcc-frontend-sooty.vercel.app
+
 ## Identificação, proposta e solução
 - Animecatalog tem o objetivo de resolver os problemas de quem está a procura de assistir ou conhecer alguma obra animada, em um sistema simples e direto.
 
@@ -34,8 +37,20 @@
 - Com o próprio GitHub, na opção de Projetos, as tarefas estão sendo dividas em processos no estilo Kanban.
 ## stack
 
-- BE: C# e .Net Core
-- FE:  React
+- BE: C# e .Net Core 6.0
+- FE:  React, Javascript e CSS.
 - Database: PostgreSQL
-- Qualidade nos cenários de testes: CodeCov
+- Qualidade nos cenários de testes: CodeCov (https://app.codecov.io/gh/fredericobwstein/tcc)
 - Observalidade: Azure Application Insights
+- ![image](https://github.com/fredericobwstein/tcc/assets/61890758/eb15cdbe-ee8e-42ef-9280-1d75d0e4f2bb)
+
+
+## Rodar localmente o projeto
+- Ferramentas: PostgreSQL (PgAdmin 4), VisualStudio Community, Runtime do .Net Core 6.0
+- Clonar o repositório do back-end (este mesmo em questão)
+- No arquivo appsettings.json, configurar no DefaultConnection a conexão com o banco de dados
+- Crie uma database com o nome animecatalog e execute o script SQL das tabelas do sistema.
+- Execute a aplicação do backend.
+- Clonar o repositório do front-end(https://github.com/fredericobwstein/tcc-frontend) e execute o seguinte comando: `npm i`
+- Crie um arquivo chamando `.env` e adicione a seguinte informação: `REACT_APP_XD=https://localhost:7281`. Lembre-se de colocar a URL do localhost do seu backend local.
+- Execute o seguinte comando: `npm run dev`
