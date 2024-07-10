@@ -6,10 +6,16 @@ namespace AnimecatalogAPI.Core.Services
     public class UsuarioListaDesejoService
     {
         private readonly UsuarioListaDesejoRepository _usuarioListaDesejoRepository;
+        private IUsuarioListaDesejoRepository @object;
 
         public UsuarioListaDesejoService(UsuarioListaDesejoRepository usuarioListaDesejoRepository)
         {
             _usuarioListaDesejoRepository = usuarioListaDesejoRepository;
+        }
+
+        public UsuarioListaDesejoService(IUsuarioListaDesejoRepository @object)
+        {
+            this.@object = @object;
         }
 
         public void AddListaDesejo(PostUsuarioListaDesejoRequest request)

@@ -2,6 +2,8 @@
 using AnimecatalogAPI.Core.Exception;
 using AnimecatalogAPI.Core.Messaging;
 using AnimecatalogAPI.Core.Repository;
+using AnimecatalogAPI.Core.Repository.Usuario;
+
 using BC = BCrypt.Net.BCrypt;
 
 namespace AnimecatalogAPI.Core.Services
@@ -9,10 +11,16 @@ namespace AnimecatalogAPI.Core.Services
     public class UsuarioService
     {
         private readonly UsuarioRepository _usuarioRepository;
+        private IUsuarioRepository @object;
 
         public UsuarioService(UsuarioRepository usuarioRepository)
         {
             _usuarioRepository = usuarioRepository;
+        }
+
+        public UsuarioService(IUsuarioRepository @object)
+        {
+            this.@object = @object;
         }
 
         public void AddUsuario(PostUsuarioRequest request)

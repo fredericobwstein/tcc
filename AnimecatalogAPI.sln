@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimecatalogAPI", "AnimecatalogAPI\AnimecatalogAPI.csproj", "{493E0D3F-0F5E-4E45-B170-D81F37518526}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AnimecatalogAPI", "AnimecatalogAPI\AnimecatalogAPI.csproj", "{493E0D3F-0F5E-4E45-B170-D81F37518526}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimecatalogAPI.Tests", "AnimecatalogAPI.Tests\AnimecatalogAPI.Tests.csproj", "{277C4AF4-B247-4541-92B3-71D9D8824916}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{493E0D3F-0F5E-4E45-B170-D81F37518526}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{493E0D3F-0F5E-4E45-B170-D81F37518526}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{493E0D3F-0F5E-4E45-B170-D81F37518526}.Release|Any CPU.Build.0 = Release|Any CPU
+		{277C4AF4-B247-4541-92B3-71D9D8824916}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{277C4AF4-B247-4541-92B3-71D9D8824916}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{277C4AF4-B247-4541-92B3-71D9D8824916}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{277C4AF4-B247-4541-92B3-71D9D8824916}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
