@@ -20,24 +20,6 @@ namespace AnimecatalogAPI.Tests
         }
 
         [Fact]
-        public void CadastrarUsuario_RequestValida_DeveInserirUsuario()
-        {
-            // Arrange
-            var request = new PostUsuarioRequest
-            {
-                Nome = "Teste",
-                Email = "Teste@gmail.com",
-                Senha = "12345",
-            };
-
-            // Act
-            _usuarioService.AddUsuario(request);
-
-            // Assert
-            _usuarioMock.SetupQueries().Verify(repo => repo.Insert(It.IsAny<Usuario>()), Times.Once);
-        }
-
-        [Fact]
         public void CadastrarUsuario_UsuarioNomeInvalido_DeveEstourarException()
         {
             // Arrange

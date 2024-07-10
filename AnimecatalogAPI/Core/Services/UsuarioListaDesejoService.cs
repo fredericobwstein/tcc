@@ -1,4 +1,5 @@
-﻿using AnimecatalogAPI.Core.Repository.RawQueryResult;
+﻿using AnimecatalogAPI.Core.Exception;
+using AnimecatalogAPI.Core.Repository.RawQueryResult;
 using AnimecatalogAPI.Core.Repository.Usuario;
 
 namespace AnimecatalogAPI.Core.Services
@@ -24,7 +25,7 @@ namespace AnimecatalogAPI.Core.Services
             {
                 if (request.UserId == null)
                 {
-                    throw new System.Exception("Você precisa estar logado para salvar algum item da lista.");
+                    throw new AnimecatalogException("Você precisa estar logado para salvar algum item da lista.");
                 }
 
                 string sql = @"
@@ -38,7 +39,7 @@ namespace AnimecatalogAPI.Core.Services
                 var response = _usuarioListaDesejoRepository.Query<ConsultaMalIdRawQueryResult>(sql, parameters).Any();
 
                 if (response)
-                    throw new System.Exception("Você já adicionou esse item na lista.");
+                    throw new AnimecatalogException("Você já adicionou esse item na lista.");
 
                     var listaDesejo = new Entities.UsuarioListaDesejo
                 {
@@ -52,7 +53,7 @@ namespace AnimecatalogAPI.Core.Services
             }
             catch (System.Exception ex)
             {
-                throw new System.Exception("Não foi possível salvar a lista de desejo.");
+                throw new AnimecatalogException("Não foi possível salvar a lista de desejo.");
             }
         }
 
@@ -78,7 +79,7 @@ namespace AnimecatalogAPI.Core.Services
             {
                 if (request.UserId == null)
                 {
-                    throw new System.Exception("Você precisa estar logado para remover algum item da lista.");
+                    throw new AnimecatalogException("Você precisa estar logado para remover algum item da lista.");
                 }
 
                 string sql = @"
@@ -102,7 +103,7 @@ namespace AnimecatalogAPI.Core.Services
             }
             catch (System.Exception ex)
             {
-                throw new System.Exception("Não foi possível remover o item da lista de desejo.");
+                throw new AnimecatalogException("Não foi possível remover o item da lista de desejo.");
             }
         }
     }
