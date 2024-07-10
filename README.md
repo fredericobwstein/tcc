@@ -16,7 +16,7 @@
 
 **Desenvolvimento**
 
-- O projeto será um sistema web, desenvolvido com C# e React. C# para desenvolvimento da API que retornará informações necessárias para realizar as funcionalidades das telas feitas com o React, e também para consumir uma API de listagem de obras animadas, para filtragrem e visualização das obras em desejo.
+- O projeto será um sistema web, desenvolvido com C# e React. C# para desenvolvimento da API que retornará informações necessárias para realizar as funcionalidades das telas feitas com o React, e também para consumir uma API de listagem de obras animadas(https://docs.api.jikan.moe/#tag/anime), para filtragrem e visualização das obras em desejo.
 
 **Qualidade do produto**
 
@@ -25,12 +25,32 @@
 ## Restrições
 
 - O sistema não fará reprodução de vídeos ou a opção de download dos episódios.
+- O site não possui responsividade.
+
+## Requisitos funcionais
+
+Identificação                | Objetivo                                                                                 |
+---------------------------- | ---------------------------------------------------------------------------------------- |
+Navegar pelo site            | Visualizar os cards de diferentes gêneros das obras japonesas                            |
+Utilizar o campo de pesquisa | Pesquisar o nome da obra para obter informações sobre                                    |
+Registro                     | Se registrar para salvar os itens na lista para melhor controle do catálogo              |
+Detalhes dos cards           | Capaz de clicar em um anime da lista para ver detalhes como sinopse, avaliação, etc.     |
+
+
+## Trade-offs
+
+- Portabilidade: O sistema não é adaptável para diferentes interfaces, sua capacidade de ser compilado em diferentes formatos é baixa. Necessário rodar em um browser de um laptop/computador. 
+- Funcionalidade: O sistema não propõe várias funcionalidades, seu objetivo é ser simples e de fácil uso, tendo poucas funcionalidades, porém, indispensáveis. Podendo criar uma lista de desejo com os animes/obras que o usuário gostaria. As pesquisas e filtragens devem retornar resultados em no máximo 2 segundos.
+- Confiabilidade: A confiabilidade gira em torno dos elementos selecionados que o usuário registrou em sua lista, ou seja, precisa estar logado com suas respectivas credenciais para gerenciar seus desejos.
+- Usabilidade: Com a interface objetiva, a ideia é ter a usabilidade leve, para atender qualquer público que tenha interesse em animações da cultura japonesa. 
+- Eficiência: Por ter uma proposta direta e simples, a interface é de fácil uso, sem mesmo precisar cadastrar-se para fazer pesquisas. 
+- Manutenibilidade: O sistema pode apresentar problemas na renderização dos campos da tela, visto que não possui responsividade. O sistema também depende da funcionalidade da API que consome, sendo assim, em caso dela estar fora do ar, o sistema não vai conseguir realizar as requisições que precisa para coleta de informações.
 
 ## C4 Model
 
 - [Acesse este caminho para ser redirecionado ao C4 Model.](files/c4-model.md)
 
-## Requisitos e Casos de Uso
+## Casos de Uso
 
 - [Acesse este caminho para ser redirecionado aos requisitos e os casos de uso.](files/requirements-nonrequirementsl.md)
 
