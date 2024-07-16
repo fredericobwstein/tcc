@@ -54,9 +54,33 @@ Detalhes dos cards           | Capaz de clicar em um anime da lista para ver det
 
 - [Acesse este caminho para ser redirecionado aos requisitos e os casos de uso.](files/requirements-nonrequirementsl.md)
 
+# Documentação da Infraestrutura
+
+## Implantação e Hospedagem no Azure
+
+### 1. Ferramentas Utilizadas
+- **Azure Web App**: Serviço de hospedagem para a API.
+- **PostgreSQL**: Banco de dados relacional(hospegado na Vercel), configurado com a connection string.
+- **GitHub Actions**: Serviço de CI/CD para automação da implantação.
+- **Visual Studio**: IDE usada para desenvolvimento e configuração da implantação no Azure.
+
+### 2. Configuração do GitHub Actions
+O GitHub Actions é usado para automação do processo de CI/CD. O arquivo de configuração `.yml` é criado no repositório GitHub para definir os passos necessários para build, test e deploy da aplicação.
+
+### 3. Etapas da publicação
+- Opção de  "Publicar" diretamente na solução do projeto.
+- Escolha "Azure" como destino de publicação.
+- Faça login na sua conta Azure.
+- Crie um novo Azure Web App.
+- Espere pela criação da instância na hospedagem.
+- Acesse o domínio do portal para prosseguir com as configurações da API.
+- Acessar o recurso "App Services" e selecioar o Web App.
+- Na seção "Configurações", adicionar as variáveis de ambiente necessárias para a aplicação.
+
+
 ## Modelagem por funcionalidade
 - Com o próprio GitHub, na opção de Projetos, as tarefas estão sendo dividas em processos no estilo Kanban.
-## stack
+## Stack
 
 - BE: C# e .Net Core 6.0
 - FE:  React, Javascript e CSS.
